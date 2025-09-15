@@ -43,14 +43,14 @@ interface IStudentClass {
   workOnHomework(): string;
   displayName(): string;
 }
-class StudentClass implements IStudentClass {
+class StudentClass {
   constructor(public firstName: string, public lastName: string) {}
 
   workOnHomework(): string {
     return 'Currently working';
   }
   displayName(): string {
-    return this.firstName;
+    return this.firstName + this.lastName;
   }
 }
 //example
