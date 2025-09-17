@@ -41,5 +41,5 @@
     "moduleDetection": "force",
   "skipLibCheck": true,
   },
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", "js/crud.js"]
 }
