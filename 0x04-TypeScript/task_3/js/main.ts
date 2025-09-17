@@ -1,11 +1,14 @@
+/// <reference path="crud.d.ts" />
+import { RowID, RowElement } from './interface';
+import * as CRUD from './crud';
 
-export type Subjects = 'Math' | 'History';
-export function teachClass(todayClass:Subjects): string{
-    if (todayClass === 'Math') {
-        return 'Teaching Math';
-    }
-        return 'Teaching History';
+const row: RowElement = {
+    firstName: 'Maarten',
+    lastName: 'Okoth',
 }
 
-console.log(teachClass('Math')); // Teaching Math
-console.log(teachClass('History')); // Teaching History
+const newRowID: RowID = CRUD.insertRow(row);
+const updatedRow: RowElement = {age: 23, ...row};
+
+CRUD.updateRow(newRowID, updatedRow);
+CRUD.deleteRow(newRowID);
